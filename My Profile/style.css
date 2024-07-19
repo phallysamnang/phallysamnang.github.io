@@ -1,0 +1,319 @@
+/*heaeder*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family:'Times New Roman', Times, serif;     /*for smooth */
+    scroll-behavior: smooth;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    background-color: black;
+}
+li{
+    list-style: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.cta{                                     /*for skill*/
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-top: 30px;
+    margin-left: 20%;
+    border-radius: 10%;
+    transition: .3s ease;
+    transition-property: background-color,color;
+}
+.cta:hover {
+    color:white;
+    background-color: crimson; 
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.nav-branding{
+    font-size: 1.5rem;
+    font-family:'Times New Roman', Times, serif ;
+    color:white;
+}
+.nav-branding span{
+    color:crimson;
+}
+.nav-link{
+    transition: 0.7s ease;
+}
+.nav-link:hover{
+    color: dodgerblue;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-animation: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+/*End heaeder*/
+
+
+
+/*Skill*/
+
+#home{
+    background-image: url(img/Profile.jpg);
+    background-size: cover;
+    background-position: top center ;
+    z-index: 1;
+    width: 100%;
+    height:500px;
+}
+#home:after{
+    content: '';
+    position: absolute;                         
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.443);
+    opacity: .7;
+    z-index: -1;
+}
+#home .tittle h1{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: white;
+    margin-left: 15%;
+}
+#home .tittle h1 span{
+    font-size: 3.2rem;
+    color:crimson;
+    margin-top: 15%;
+}
+
+/*End skill*/
+
+/*About*/
+
+#about .textabout{
+    text-align: Center ;
+    padding: auto;
+    margin-top: 40px;
+}
+#about .textabout span{
+    color: crimson;
+}
+#about .textabout h1{
+    font-size: 3rem;
+}
+#about .textabout h2{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: auto;
+    margin-top: 10px;
+}
+#about .textabout p{
+    text-align: center;
+    margin-top: 5%;
+}
+
+/*End About*/
+
+/*Skill*/
+
+#skill .textskill h1{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 30px;
+}
+#skill .textskill h1 span{
+    color: crimson;
+}
+
+#skill .image{
+    flex-basis: 80%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: center;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 15px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#skill .image::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #0b7dff 0%,#2a9168 100%);
+    opacity: .7;
+    z-index: -1;
+     
+}
+#skill .image h1{
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+#skill h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+#skill p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*End Skill*/
+
+/* Contact*/
+
+#contact .contacttexth1{
+    font-size: 3rem;
+    text-align: center;
+}
+#contact .contacttexth1 span{
+    color: crimson;
+}
+#contact .contact{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#contact .contact-items {
+    width: 400px;
+}
+#contact .contact-item {
+    width: 80%;
+    padding: 20px;
+    text-align: center;                          /*For Contact animation*/
+    border-radius: 10px;
+    padding: 0px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    transition: .3s ease box-shadow;
+}
+#contact .contact-item:hover{
+    box-shadow: 0px  0px 5px 0 #0000002c ;   /* For hover */
+}
+#contact .phone{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#contact .contact-info h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#contact .contact-info h2{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+
+/* End Contact*/
+
+
+/*back*/
+
+#back .back{                                     /*for skill*/
+        display: inline-block;
+        padding: 5px 20px;
+        color: rgb(0, 0, 0);
+        background-color: transparent;
+        border: 2px solid crimson;
+        font-size: .5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin-top: 30px;
+        /*margin-left: 30%;*/
+        border-radius: 0%;
+        transition: .3s ease;
+        transition-property: background-color,color;
+}
+#back .back:hover {
+        color:white;
+        background-color: crimson; 
+}
+
+/* End back*/
+
+/*Media of heaeder*/
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        transform: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+}
+
+/* End Media of heaeder*/
